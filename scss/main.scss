@@ -23,6 +23,12 @@ body {
     color: $text-color;
     background: #fff;
 }
+.container {
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 main {
     flex-grow: 1;
 }
