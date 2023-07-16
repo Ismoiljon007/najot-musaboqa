@@ -1,0 +1,276 @@
+// help section
+.help {
+  padding-bottom: 80px;
+
+  &__title {
+    @extend %title
+  }
+
+  &__row {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 20px;
+
+    @include media(940px) {
+      grid-template-columns: repeat(auto-fit, minmax(359px, 1fr));
+    }
+
+    // grid-template-rows: repeat(2, 1fr);
+  }
+}
+
+.help-item {
+  border-radius: 20px;
+  padding: 30px;
+  border: 1px solid rgba($gray-border, 0.15);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  @include media(940px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  @include media(776px) {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  @include media(467px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background-color: $rec-bg;
+    padding: 35px;
+
+    @include media(776px) {
+      padding: 15px;
+      width: 54px;
+      height: 54px;
+    }
+
+    img {
+      width: 40px;
+      height: 40px;
+
+      @include media(776px) {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+  }
+
+  &__text {
+    span {
+      font-weight: 700;
+    }
+  }
+}
+
+
+// choose 
+.choose {
+
+  &__row {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    @include media(992px) {
+      flex-direction: column;
+    }
+  }
+
+  &__main {
+    flex: 1;
+    padding: 20px 0 80px 0;
+
+    @include media(992px) {
+      width: 100%;
+      padding-bottom: 30px;
+    }
+  }
+
+  &__title {
+    @extend %title
+  }
+
+  &__text {
+    margin-top: 20px;
+    max-width: 560px;
+    @include media(992px) {
+      max-width: 100%;
+    }
+  }
+
+  &__results {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 40px;
+  }
+
+  &__img {
+    flex: 1;
+    min-width: 450px;
+    width: 560px;
+    height: 385px;
+    position: relative;
+
+    @include media(992px) {
+      // flex-direction: column;
+      width: 100%;
+      height: auto;
+    }
+    
+    img {
+      width: 100%;
+      height: auto;
+      object-position: bottom;
+      position: absolute;
+      bottom: 0;
+      display: block;
+
+      @include media(992px) {
+        height: 100%;
+        position: relative;
+        object-fit: cover;
+
+      }
+
+    }
+  }
+}
+
+
+.choose-result {
+
+  &__title {
+    @include font(700, 28px, normal);
+    color: $pr-color;
+  }
+
+  &__text {
+    margin-top: 10px;
+  }
+}
+
+
+// hotline
+.hotline {
+  padding-bottom: 80px;
+
+  &__bg {
+    background-color: $pr-color;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 31px 57px 34px 60px;
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+}
+
+.hotline-phone {
+
+  &__title {
+    color: $white;
+    @include font(600, 24px, normal);
+  }
+
+  &__number {
+    margin-top: 10px;
+    @include font(700, 42px, normal);
+    letter-spacing: -1.26px;
+    color: $white;
+  }
+}
+
+.hotline-form {
+
+  &__title {
+    color: $white;
+    @include font(700, 18px, normal);
+  }
+
+  &__row {
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  &__input {
+    width: 249px;
+    // height: 58px;
+    background-color: $white;
+    border-radius: 10px;
+    padding: 5px 16px;
+
+    input {
+      border: none;
+      @include font(400, 16px, normal);
+      color: $base-black;
+      border-radius: 5px;
+
+      // padding: 8px 4px;
+      // border: 2px solid $white;
+      &:focus {
+        outline: none;
+        // border-color: $pr-color;
+      }
+
+    }
+  }
+
+  &__label {
+    @include font(400, 12px, normal);
+    color: rgba($gray-low, 0.40)
+  }
+
+
+  &__button {
+    @include font(600, 16px, normal);
+    color: $white;
+    padding: 18.5px 36px;
+    background-color: transparent;
+    outline: none;
+    border-radius: 10px;
+    border: 1px solid $white;
+    cursor: pointer;
+    transition: .3s ease;
+
+    &:hover {
+      background-color: $white;
+      color: $pr-color;
+    }
+
+  }
+}
+
+.hotline-from {
+
+  &__description {
+    margin-top: 22px;
+    @include font(600, 12px, normal);
+    color: rgba($color: $white, $alpha: 0.5);
+
+    a {
+      @include font(600, 12px, normal);
+      color: rgba($color: $white, $alpha: 0.5)
+    }
+  }
+}
