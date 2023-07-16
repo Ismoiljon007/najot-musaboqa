@@ -1,0 +1,10 @@
+%pr-btn {
+    background: $pr-color;
+    color: #fff;
+    @include font(600,16px,normal);
+}
+%title {
+    @include font(700,32px,normal);
+    letter-spacing: -0.96px;
+    color: $text-color;
+}
