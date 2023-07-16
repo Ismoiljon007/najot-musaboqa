@@ -37,6 +37,11 @@
 .help {
   padding-bottom: 80px;
 }
+@media (max-width: 500px) {
+  .help {
+    padding-bottom: 40px;
+  }
+}
 .help__row {
   margin-top: 30px;
   display: grid;
@@ -46,6 +51,11 @@
 @media (max-width: 940px) {
   .help__row {
     grid-template-columns: repeat(auto-fit, minmax(359px, 1fr));
+  }
+}
+@media (max-width: 400px) {
+  .help__row {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -190,6 +200,11 @@
     height: auto;
   }
 }
+@media (max-width: 500px) {
+  .choose__img {
+    min-width: 100%;
+  }
+}
 .choose__img img {
   width: 100%;
   height: auto;
@@ -214,18 +229,39 @@
   line-height: normal;
   color: #33836E;
 }
+@media (max-width: 500px) {
+  .choose-result__title {
+    font-size: 20px;
+    letter-spacing: -0.6px;
+  }
+}
 .choose-result__text {
   margin-top: 10px;
+}
+@media (max-width: 500px) {
+  .choose-result__text {
+    font-size: 12px;
+  }
 }
 
 .hotline {
   padding-bottom: 80px;
+}
+@media (max-width: 500px) {
+  .hotline {
+    padding-bottom: 40px;
+  }
 }
 .hotline__bg {
   background-color: #33836E;
   border-radius: 20px;
   overflow: hidden;
   padding: 31px 57px 34px 60px;
+}
+@media (max-width: 992px) {
+  .hotline__bg {
+    padding: 20px;
+  }
 }
 .hotline__row {
   display: -webkit-box;
@@ -239,12 +275,26 @@
           justify-content: space-between;
   gap: 20px;
 }
+@media (max-width: 992px) {
+  .hotline__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 10px;
+  }
+}
 
 .hotline-phone__title {
   color: #fff;
   font-weight: 600;
   font-size: 24px;
   line-height: normal;
+}
+@media (max-width: 600px) {
+  .hotline-phone__title {
+    font-size: 18px;
+  }
 }
 .hotline-phone__number {
   margin-top: 10px;
@@ -254,12 +304,29 @@
   letter-spacing: -1.26px;
   color: #fff;
 }
+@media (max-width: 600px) {
+  .hotline-phone__number {
+    font-size: 36px;
+    letter-spacing: -1.08px;
+  }
+}
 
+@media (max-width: 992px) {
+  .hotline-form {
+    width: 100%;
+    text-align: center;
+  }
+}
 .hotline-form__title {
   color: #fff;
   font-weight: 700;
   font-size: 18px;
   line-height: normal;
+}
+@media (max-width: 600px) {
+  .hotline-form__title {
+    font-size: 16px;
+  }
 }
 .hotline-form__row {
   margin-top: 16px;
@@ -271,11 +338,42 @@
           align-items: center;
   gap: 15px;
 }
+@media (max-width: 600px) {
+  .hotline-form__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
 .hotline-form__input {
   width: 249px;
   background-color: #fff;
   border-radius: 10px;
-  padding: 5px 16px;
+  padding: 7.5px 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 2px;
+}
+@media (max-width: 992px) {
+  .hotline-form__input {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 50%;
+            flex: 0 1 50%;
+  }
+}
+@media (max-width: 600px) {
+  .hotline-form__input {
+    width: 100%;
+  }
 }
 .hotline-form__input input {
   border: none;
@@ -294,12 +392,29 @@
   line-height: normal;
   color: rgba(47, 43, 67, 0.4);
 }
+@media (max-width: 992px) {
+  .hotline-form__label {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 50%;
+            flex: 1 1 50%;
+  }
+}
 .hotline-form__button {
   font-weight: 600;
   font-size: 16px;
   line-height: normal;
   color: #fff;
-  padding: 18.5px 36px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 207px;
+  height: 56px;
   background-color: transparent;
   outline: none;
   border-radius: 10px;
@@ -308,6 +423,19 @@
   -webkit-transition: 0.3s ease;
   -o-transition: 0.3s ease;
   transition: 0.3s ease;
+}
+@media (max-width: 992px) {
+  .hotline-form__button {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 50%;
+            flex: 1 1 50%;
+  }
+}
+@media (max-width: 600px) {
+  .hotline-form__button {
+    width: 100%;
+    padding: 16px 0;
+  }
 }
 .hotline-form__button:hover {
   background-color: #fff;

@@ -2,6 +2,10 @@
 .help {
   padding-bottom: 80px;
 
+  @include media(500px) {
+    padding-bottom: 40px;
+  }
+
   &__title {
     @extend %title
   }
@@ -14,6 +18,9 @@
 
     @include media(940px) {
       grid-template-columns: repeat(auto-fit, minmax(359px, 1fr));
+    }
+    @include media(400px) {
+      grid-template-columns: 1fr;
     }
 
     // grid-template-rows: repeat(2, 1fr);
@@ -106,6 +113,7 @@
   &__text {
     margin-top: 20px;
     max-width: 560px;
+
     @include media(992px) {
       max-width: 100%;
     }
@@ -131,7 +139,10 @@
       width: 100%;
       height: auto;
     }
-    
+    @include media(500px) {
+      min-width: 100%
+    }
+
     img {
       width: 100%;
       height: auto;
@@ -144,7 +155,6 @@
         height: 100%;
         position: relative;
         object-fit: cover;
-
       }
 
     }
@@ -157,10 +167,17 @@
   &__title {
     @include font(700, 28px, normal);
     color: $pr-color;
+    @include media(500px) {
+      font-size: 20px;
+      letter-spacing: -0.6px;
+    }
   }
 
   &__text {
     margin-top: 10px;
+    @include media(500px) {
+      font-size: 12px;
+    }
   }
 }
 
@@ -169,11 +186,19 @@
 .hotline {
   padding-bottom: 80px;
 
+  @include media(500px) {
+    padding-bottom: 40px;
+  }
+
   &__bg {
     background-color: $pr-color;
     border-radius: 20px;
     overflow: hidden;
     padding: 31px 57px 34px 60px;
+
+    @include media(992px) {
+      padding: 20px;
+    }
   }
 
   &__row {
@@ -181,6 +206,11 @@
     align-items: center;
     justify-content: space-between;
     gap: 20px;
+
+    @include media(992px) {
+      flex-direction: column;
+      gap: 10px;
+    }
   }
 }
 
@@ -189,6 +219,10 @@
   &__title {
     color: $white;
     @include font(600, 24px, normal);
+
+    @include media(600px) {
+      font-size: 18px;
+    }
   }
 
   &__number {
@@ -196,14 +230,27 @@
     @include font(700, 42px, normal);
     letter-spacing: -1.26px;
     color: $white;
+
+    @include media(600px) {
+      font-size: 36px;
+      letter-spacing: -1.08px;
+    }
   }
 }
 
 .hotline-form {
+  @include media(992px) {
+    width: 100%;
+    text-align: center;
+  }
 
   &__title {
     color: $white;
     @include font(700, 18px, normal);
+
+    @include media(600px) {
+      font-size: 16px;
+    }
   }
 
   &__row {
@@ -211,6 +258,10 @@
     display: flex;
     align-items: center;
     gap: 15px;
+
+    @include media(600px) {
+      flex-direction: column;
+    }
   }
 
   &__input {
@@ -218,7 +269,19 @@
     // height: 58px;
     background-color: $white;
     border-radius: 10px;
-    padding: 5px 16px;
+    padding: 7.5px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+
+    @include media(992px) {
+      flex: 0 1 50%;
+    }
+
+    @include media(600px) {
+      width: 100%;
+    }
 
     input {
       border: none;
@@ -238,20 +301,39 @@
 
   &__label {
     @include font(400, 12px, normal);
-    color: rgba($gray-low, 0.40)
+    color: rgba($gray-low, 0.40);
+
+    @include media(992px) {
+      flex: 1 1 50%;
+    }
+
+
   }
 
 
   &__button {
     @include font(600, 16px, normal);
     color: $white;
-    padding: 18.5px 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 207px;
+    height: 56px;
     background-color: transparent;
     outline: none;
     border-radius: 10px;
     border: 1px solid $white;
     cursor: pointer;
     transition: .3s ease;
+
+    @include media(992px) {
+      flex: 1 1 50%;
+    }
+
+    @include media(600px) {
+      width: 100%;
+      padding: 16px 0;
+    }
 
     &:hover {
       background-color: $white;
